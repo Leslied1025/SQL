@@ -1,0 +1,16 @@
+/* What does the app's SQL look like? */
+CREATE TABLE baseball (id INTEGER primary key, name TEXT, player_number INTEGER, position TEXT, team TEXT);
+
+INSERT INTO baseball VALUES (1, "Lucas", 9, "left field", "Marlins");
+INSERT INTO baseball VALUES (2, "Andy", 5, "second base", "Cubs");
+INSERT INTO baseball VALUES (3, "Sklyer", 7, "first base", "Braves");
+
+SELECT * FROM baseball;
+
+UPDATE baseball SET position = "first base" WHERE id = 3;
+
+SELECT * FROM baseball;
+
+DELETE FROM baseball WHERE id = 3;
+
+SELECT * FROM baseball;
