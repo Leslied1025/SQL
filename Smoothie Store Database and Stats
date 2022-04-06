@@ -1,0 +1,26 @@
+/** Smoothies**/
+
+CREATE TABLE smoothies (id INTEGER PRIMARY KEY, Flavor TEXT, calories_grams INTEGER, fat_grams INTEGER, carbs_grams INTEGER, protein_grams INTEGER, price_dollars INTEGER);
+
+INSERT INTO smoothies VALUES (1, "Strawberry Banana", 350, 0, 95, 2, 4);
+INSERT INTO smoothies VALUES (2, "Berry Bliss", 325, 1, 85, 1, 4);
+INSERT INTO smoothies VALUES (3, "Tropical Punch", 430, 0, 110, 3, 4);
+INSERT INTO smoothies VALUES (4, "Peanut Butter Cup", 700, 18, 131, 10, 4);
+INSERT INTO smoothies VALUES (5, "Pina Colada", 510, 4, 117, 3, 4);
+INSERT INTO smoothies VALUES (6, "Mocha Dream", 540, 4, 124, 5, 4);
+INSERT INTO smoothies VALUES (7, "Cucumber Kiwi", 180, 0, 43, 1, 4);
+INSERT INTO smoothies VALUES (8, "Creamsicle Dream", 400, 0, 97, 2, 5);
+INSERT INTO smoothies VALUES (9, "Peaches and cream", 550, 4, 131, 4, 5);
+INSERT INTO smoothies VALUES (10, "Papaya Point", 610, 12, 127, 8, 5);
+INSERT INTO smoothies VALUES (11, "Mocha Java", 360, 3, 124, 2, 5);
+INSERT INTO smoothies VALUES (12, "Oats and berries", 410, 4, 83, 15, 5);
+INSERT INTO smoothies VALUES (13, "Mango Madness", 540, 4, 124, 5, 5);
+INSERT INTO smoothies VALUES (14, "Very Cherry", 370, 0, 94, 2, 5);
+INSERT INTO smoothies VALUES (15, "Blue Paradise", 400, 0, 97, 2, 5);
+SELECT * FROM smoothies;
+
+SELECT * FROM smoothies WHERE price_dollars < 3 ORDER BY price_dollars;
+
+SELECT * FROM smoothies WHERE protein_grams > 0 ORDER BY protein_grams;
+
+SELECT SUM (protein_grams) FROM smoothies;
